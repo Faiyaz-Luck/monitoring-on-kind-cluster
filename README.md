@@ -12,6 +12,14 @@ curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.t
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 
+Use the following command with --classic flag to install:
+
+sudo snap install kubectl --classic
+
+Verify installation:
+kubectl version --client
+
+
 Install kind
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
 chmod +x ./kind
