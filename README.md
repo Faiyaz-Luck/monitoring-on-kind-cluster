@@ -8,9 +8,15 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 Install kubectl
+# Install kubectl (manually)
 curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
+hash -r   # Reset shell command cache
+kubectl version --client
+
+
+Alternative step install kubectl 
 
 Use the following command with --classic flag to install:
 
